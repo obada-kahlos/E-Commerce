@@ -1,0 +1,166 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  overflow-x: hidden;
+}
+
+li {
+  list-style: none;
+}
+
+.wrapper {
+  padding-left: 15px;
+  padding-right: 15px;
+  margin-left: auto;
+  margin-right: auto;
+}
+/* Small */
+@media (min-width: 768px) {
+  .wrapper {
+    width: 750px;
+  }
+}
+/* Medium */
+@media (min-width: 992px) {
+  .wrapper {
+    width: 970px;
+  }
+}
+/* Large */
+@media (min-width: 1200px) {
+  .wrapper {
+    width: 1170px;
+  }
+}
+
+.title {
+  position: relative;
+}
+.title div {
+  position: absolute;
+  right: 15px;
+  top: -10px;
+  width: 20px;
+  height: 20px;
+  line-height: 20px;
+  text-align: center;
+  border-radius: 50%;
+  font-size: 10px;
+  color: #fff;
+  background-color: #d10024;
+}
+
+.navbar a {
+  font-size: 15px !important;
+  font-weight: 500;
+  position: relative;
+}
+
+.search:focus {
+  outline: none;
+  border: 2px solid #d10024;
+}
+
+.navbar li:hover {
+  color: #d10024;
+  background-color: transparent;
+}
+
+.navbar li a::after {
+  content: "";
+  display: block;
+  width: 0%;
+  height: 2px;
+  background-color: #d10024;
+  -webkit-transition: 0.2s all;
+  transition: 0.2s all;
+}
+.navbar li a:hover::after {
+  width: 100%;
+}
+.navbar li a:focus::after {
+  width: 100%;
+}
+
+.admin::after {
+  position: absolute;
+  content: "";
+  bottom: 0px;
+  left: 0px;
+  width: 0px;
+  height: 2px;
+  background-color: #d10024;
+  transition: 0.3s;
+}
+.logout::after {
+  position: absolute;
+  content: "";
+  bottom: 0px;
+  left: 0px;
+  width: 0px;
+  height: 2px;
+  background-color: #d10024;
+  transition: 0.3s;
+}
+.logout:hover::after {
+  width: 100%;
+}
+.admin:hover::after {
+  width: 100%;
+}
+.product-btns > button {
+  position: relative;
+  width: 40px;
+  height: 40px;
+  line-height: 40px;
+  background: transparent;
+  border: none;
+  -webkit-transition: 0.2s all;
+  transition: 0.2s all;
+}
+.product-btns > button:hover {
+  background-color: #e4e7ed;
+  color: #d10024;
+  border-radius: 50%;
+}
+.product-btns > button .tooltipp {
+  position: absolute;
+  bottom: 100%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -15px);
+  -ms-transform: translate(-50%, -15px);
+  transform: translate(-50%, -15px);
+  width: 150px;
+  padding: 10px;
+  font-size: 12px;
+  line-height: 10px;
+  background: #1e1f29;
+  color: #fff;
+  text-transform: uppercase;
+  z-index: 10;
+  opacity: 0;
+  visibility: hidden;
+  -webkit-transition: 0.2s all;
+  transition: 0.2s all;
+}
+.product-btns > button:hover .tooltipp {
+  opacity: 1;
+  visibility: visible;
+  -webkit-transform: translate(-50%, -5px);
+  -ms-transform: translate(-50%, -5px);
+  transform: translate(-50%, -5px);
+}
+
+/* scroll style  */
+/* 
+.red {
+  color: red !important;
+} */
